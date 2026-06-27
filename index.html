@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Side Hustle Hub - Passive Income Resources</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --primary-glow: conic-gradient(from 180deg at 50% 50%, #1fb6ff 0deg, #7e5bef 120deg, #ff49db 240deg, #1fb6ff 360deg);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle animated background grid / glow */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #7e5bef;
+            filter: blur(150px);
+            opacity: 0.15;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        /* Profile Header */
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #1fb6ff, #7e5bef, #ff49db);
+            animation: rotate-border 6s linear infinite;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bg-color);
+            background-color: #1e293b;
+        }
+
+        @keyframes rotate-border {
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile .username {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .profile .bio {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* Buttons Stack */
+        .links-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.05rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(126, 91, 239, 0.2);
+        }
+
+        /* High Priority / Pulse Button */
+        .link-btn.featured {
+            background: linear-gradient(135deg, rgba(31, 182, 255, 0.1), rgba(126, 91, 239, 0.15));
+            border: 1.5px solid #7e5bef;
+            animation: pulse-border 2s infinite;
+        }
+
+        .link-btn.featured:hover {
+            background: linear-gradient(135deg, rgba(31, 182, 255, 0.2), rgba(126, 91, 239, 0.25));
+            border-color: #ff49db;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(126, 91, 239, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(126, 91, 239, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(126, 91, 239, 0); }
+        }
+
+        /* Social Icons */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--text-color);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="profile">
+            <div class="avatar-container">
+                <!-- Avatar image, fallback to placeholder if local file is missing -->
+                <img class="avatar" src="ai_avatar.png" alt="AI Avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=AIShorts'">
+            </div>
+            <h1>AI Side Hustle Hub</h1>
+            <p class="username">@AIShortsMastery</p>
+            <p class="bio">Discover the best tools and side hustles to build financial freedom using AI automation.</p>
+        </header>
+
+        <!-- Links -->
+        <div class="links-stack">
+            <a href="https://your-affiliate-link-here.com" class="link-btn featured" target="_blank" rel="noopener">
+                🔥 Get AI Shorts Mastery (Special Discount)
+            </a>
+            
+            <a href="https://github.com" class="link-btn" target="_blank" rel="noopener">
+                🎁 Free Gift: AI Side Hustle Checklist (PDF)
+            </a>
+            
+            <a href="#" class="link-btn" target="_blank" rel="noopener">
+                💬 Join Private VIP Community (Telegram)
+            </a>
+        </div>
+
+        <!-- Social Media handles if present -->
+        <div class="socials">
+            
+            
+            <a href="https://github.com" class="social-icon" target="_blank">GitHub</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 AI Side Hustle Hub. Powered by free GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
